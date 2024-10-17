@@ -13,11 +13,26 @@ function draw() {
 		particulas[i].update();
 		particulas[i].display();
 	}
+
+	/**
+	 * Esta es una forma de borrar las partículas muertas utilizando
+	 * un for loop que navega todas las partículas y se pergunta por
+	 * la varible boleana estaViva.
+	 *
+	 * Utiliza la función slipice para borrar la partícula específica
+	 * mediante su Indice
+	 *
+	 */
+
 	// for (let i = 0; i < particulas.length; i++) {
 	// 	if (!particulas[i].estaViva) {
 	// 		particulas.splice(i, 1);
 	// 	}
 	// }
+
+	/**
+	 * Esta es la forma moderna de resolverlo
+	 */
 
 	particulas = particulas.filter((pelota) => pelota.estaViva);
 
