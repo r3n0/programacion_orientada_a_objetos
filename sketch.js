@@ -13,10 +13,13 @@ function draw() {
 		particulas[i].update();
 		particulas[i].display();
 	}
-	for (let i = 0; i < particulas.length; i++) {
-		if (!particulas[i].estaViva) {
-			particulas.splice(i, 1);
-		}
-	}
+	// for (let i = 0; i < particulas.length; i++) {
+	// 	if (!particulas[i].estaViva) {
+	// 		particulas.splice(i, 1);
+	// 	}
+	// }
+
+	particulas = particulas.filter((pelota) => pelota.estaViva);
+
 	console.log(particulas.length);
 }
